@@ -15,7 +15,7 @@ public class App {
         conn.setRequestProperty("Content-Type", "application/json; utf-8");
         conn.setDoOutput(true);
 
-        String jsonInputString = "{\"model\": \"llama2\", \"prompt\": \"Genera 10 palabra aleatorias en español de minimo 7 letras\", \"stream\": false}";
+        String jsonInputString = "{\"model\": \"llama3\", \"prompt\": \"Proporcióname 2 palabras cotidianas en español que tengan más de 5 letras y que no terminen en 'mente', 'ente' o 'me' (por ejemplo, 'describirme', 'Inicialmente'). Solo dame las palabras, sin ninguna otra información adicional.\", \"stream\": false}";
 
         try(OutputStream os = conn.getOutputStream()) {
             byte[] input = jsonInputString.getBytes("utf-8");
